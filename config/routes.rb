@@ -7,7 +7,11 @@ Rails.application.routes.draw do
   resources :comments
   resources :photos
   get ":username/liked" => "users#liked", as: :liked
-  get "/:username" => "users#show", as: :user
+  get ":username" => "users#show", as: :user
+  get ":username/feed"
+  get ":username/followers"
+  get ":username/following"
+  
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
