@@ -1,0 +1,9 @@
+<h1>feed</h1>
+<h2>posts by people you follow</h2>
+
+
+<% @user.feed.each do |photo| %>
+  <%= render photo %>
+<% end %>
+
+
